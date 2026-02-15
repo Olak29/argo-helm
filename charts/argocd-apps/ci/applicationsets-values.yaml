@@ -10,7 +10,7 @@ applicationsets:
     # goTemplate: false
     generators:
     - git:
-        repoURL: https://github.com/argoproj/argocd-example-apps.git
+        repoURL: https://github.com/Olak29/argocd-example-apps.git
         revision: HEAD
         directories:
         - path: guestbook
@@ -27,7 +27,7 @@ applicationsets:
       spec:
         project: default
         source:
-          repoURL: https://github.com/argoproj/argocd-example-apps.git
+          repoURL: https://github.com/Olak29/argocd-example-apps.git
           targetRevision: HEAD
           path: '{{path}}'
         destination:
@@ -73,7 +73,7 @@ applicationsets:
             project: '{{cluster}}'
             source:
               targetRevision: HEAD
-              repoURL: https://github.com/argoproj/argo-cd.git
+              repoURL: https://github.com/Olak29/argo-cd.git
               # New path value is generated here:
               path: 'applicationset/examples/template-override/{{cluster}}-override'
             destination: {}
@@ -83,7 +83,7 @@ applicationsets:
       spec:
         project: '{{cluster}}'
         source:
-          repoURL: https://github.com/argoproj/argo-cd.git
+          repoURL: https://github.com/Olak29/argo-cd.git
           targetRevision: HEAD
           # This 'default' value is not used: it is is replaced by the generator's template path, above
           path: applicationset/examples/template-override/default
