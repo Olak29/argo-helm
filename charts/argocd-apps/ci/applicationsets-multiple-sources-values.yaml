@@ -13,10 +13,7 @@ applicationsets:
         name: '{{cluster}}-guestbook'
       spec:
         project: default
-        sources:
-        - chart: elasticsearch
-          repoURL: https://helm.elastic.co
-          targetRevision: 8.5.1
+        source:
         - repoURL: https://github.com/Olak29/argocd-example-apps.git
           path: guestbook
           targetRevision: HEAD
