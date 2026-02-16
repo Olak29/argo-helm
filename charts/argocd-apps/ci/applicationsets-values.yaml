@@ -50,19 +50,19 @@ applicationsets:
     syncPolicy:
       # Set Application finalizer
       preserveResourcesOnDeletion: false
-    templatePatch: |
-      spec:
-        source:
-          helm:
-            valueFiles:
-            {{- range $valueFile := .valueFiles }}
-              - {{ $valueFile }}
-            {{- end }}
-      {{- if .autoSync }}
-        syncPolicy:
-          automated:
-            prune: {{ .prune }}
-      {{- end }}
+    # templatePatch: |
+    #   spec:
+    #     source:
+    #       helm:
+    #         valueFiles:
+    #         {{- range $valueFile := .valueFiles }}
+    #           - {{ $valueFile }}
+    #         {{- end }}
+    #   {{- if .autoSync }}
+    #     syncPolicy:
+    #       automated:
+    #         prune: {{ .prune }}
+    #   {{- end }}
   # applicationset-list-generator:
   #   generators:
   #   - list:
@@ -82,7 +82,7 @@ applicationsets:
   #   template:
   #     metadata:
   #       name: '{{cluster}}-guestbook'
-  #     spec:
+  #     spec:s
   #       project: '{{cluster}}'
   #       source:
   #         repoURL: https://github.com/Olak29/argo-cd.git
