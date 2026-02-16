@@ -13,7 +13,7 @@ applicationsets:
         name: '{{cluster}}-guestbook'
       spec:
         project: default
-        source:
+        sources:
         - repoURL: https://github.com/Olak29/argocd-example-apps.git
           path: guestbook
           targetRevision: HEAD
