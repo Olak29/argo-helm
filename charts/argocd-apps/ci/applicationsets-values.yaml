@@ -4,6 +4,7 @@ applicationsets:
   applicationset:
     additionalLabels: {}
     additionalAnnotations: {}
+    namespace: argo-cd
     finalizers:
     - resources-finalizer.argocd.argoproj.io
     # See PR #10026 (ArgoCD v2.5 or later)
@@ -39,15 +40,15 @@ applicationsets:
           automated:
             prune: false
             selfHeal: false
-        ignoreDifferences:
-        - group: apps
-          kind: Deployment
-          jsonPointers:
-          - /spec/replicas
-        info:
-        - name: url
-          value: https://argoproj.github.io/
-    syncPolicy:
+    #     ignoreDifferences:
+    #     - group: apps
+    #       kind: Deployment
+    #       jsonPointers:
+    #       - /spec/replicas
+    #     info:
+    #     - name: url
+    #       value: https://argoproj.github.io/
+    # syncPolicy:
       # Set Application finalizer
       preserveResourcesOnDeletion: false
     # templatePatch: |
