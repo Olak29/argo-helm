@@ -94,7 +94,7 @@ projects: {}
 ## Ref: https://argo-cd.readthedocs.io/en/stable/operator-manual/applicationset/
 applicationsets: 
  guestbook:
-   namespace: argocd
+   namespace: argo-cd
    additionalLabels: {}
    additionalAnnotations: {}
    finalizers:
