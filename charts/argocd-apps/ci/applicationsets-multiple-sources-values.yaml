@@ -2,6 +2,8 @@
 
 applicationsets:
   applicationset-multiple-sources:
+    goTemplate: false
+    goTemplateOptions: ["missingkey=error"]
     generators:
     - list:
         elements:
