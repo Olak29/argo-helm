@@ -50,7 +50,7 @@ applicationsets:
     #       value: https://argoproj.github.io/
     # syncPolicy:
       # Set Application finalizer
-      preserveResourcesOnDeletion: false
+      # preserveResourcesOnDeletion: false
     # templatePatch: |
     #   spec:
     #     source:
