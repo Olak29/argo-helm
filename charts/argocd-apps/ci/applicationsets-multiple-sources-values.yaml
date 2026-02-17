@@ -22,7 +22,7 @@ applicationsets:
           targetRevision: HEAD
         destination:
           server: '{{url}}'
-          namespace: default
+          # namespace: 
         syncPolicy:
          syncOptions:
           - ApplyOutOfSyncOnly=true
